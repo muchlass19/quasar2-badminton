@@ -6,7 +6,7 @@
           <q-avatar class="q-mr-md">
             <img src="~assets/img/logo.svg" />
           </q-avatar>
-          TetamBadminton
+          Neo Tepok Bulu
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -19,7 +19,6 @@
 
 <script setup>
 import { ref } from "vue";
-import EssentialLink from "components/EssentialLink.vue";
 
 defineOptions({
   name: "MainLayout",
