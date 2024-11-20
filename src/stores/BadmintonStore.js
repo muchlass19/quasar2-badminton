@@ -92,6 +92,7 @@ export const useBadmintonStore = defineStore("BadmintonStore", {
       this.isRedo = false;
       this.isStart = false;
       this.timer = "00:00:000";
+      this.isFastStart = false;
       this.canPlay = false;
     },
     setIsSingle(value) {
