@@ -139,15 +139,7 @@ const props = defineProps({
 const emit = defineEmits(["closeDialog"]);
 
 // Sync dialog state with the prop
-const localStepDialog = ref(false);
 const step = ref(1);
-
-watch(
-  () => props.stepDialog,
-  (newVal) => {
-    localStepDialog.value = newVal;
-  }
-);
 
 // Pinia store
 const badmintonStore = useBadmintonStore();
@@ -183,6 +175,11 @@ const isSingle = computed({
 const isFastStart = computed({
   get: () => valueIsFastStart.value,
   set: (val) => badmintonStore.setIsFastStart(val),
+});
+
+const localStepDialog = computed({
+  get: () => props.stepDialog,
+  set: (val) => emit("closeDialog", val),
 });
 
 // Methods to set values
