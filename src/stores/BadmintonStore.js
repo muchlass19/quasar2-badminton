@@ -440,6 +440,7 @@ export const useBadmintonStore = defineStore("BadmintonStore", {
     },
     resetTimer() {
       this.isStart = false;
+      this.setDefault();
       this.reset();
     },
     timeToString() {
